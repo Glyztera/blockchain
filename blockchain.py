@@ -243,13 +243,15 @@ def new_transaction():
     # Create a new Transaction
     index = blockchain.new_transaction(values['sender'], values['recipient'], values['amount'])
 
-    response = {'message': f'Transaction will be added to Block {index}'}
+    response = {'message': f"Transaction of {blockchain.coin_name} ({blockchain.coin_symbol}) will be added to Block {index}"}
     return jsonify(response), 201
 
 
 @app.route('/chain', methods=['GET'])
 def full_chain():
     response = {
+        'coin_name': blockchain.coin_name,
+        'coin_symbol': blockchain.coin_symbol,
         'chain': blockchain.chain,
         'length': len(blockchain.chain),
     }
