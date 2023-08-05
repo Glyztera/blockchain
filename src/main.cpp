@@ -34,7 +34,7 @@ int main()
     glyztera.printChain();
     
     // Is it valid?
-    printf("\nIs chain still valid? %d\n", glyztera.isChainValid());
+    std::cout << "\nIs chain still valid? " << glyztera.isChainValid() << '\n';
     
     // Someone's getting sneaky
     Block *hackBlock = glyztera.getLatestBlock();
@@ -45,7 +45,7 @@ int main()
     glyztera.printChain();
 
     // Awww! Why is it not valid?
-    printf("\nIs chain still valid? %d\n", glyztera.isChainValid());
+    std::cout << "\nIs chain still valid? " << glyztera.isChainValid() << '\n';
     
     return 0;
 }
