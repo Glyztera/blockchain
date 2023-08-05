@@ -19,33 +19,33 @@ using namespace std;
 int main()
 {
     // Start Blockchain
-    Blockchain awesomeCoin;
+    Blockchain glyztera;
     
     // Data for first block
     time_t data1Time;
     TransactionData data1(1.5, "Joe", "Sally", time(&data1Time));
-    awesomeCoin.addBlock(data1);
+    glyztera.addBlock(data1);
     
     time_t data2Time;
     TransactionData data2(0.2233, "Martha", "Fred", time(&data2Time));
-    awesomeCoin.addBlock(data2);
+    glyztera.addBlock(data2);
     
-    // Let's see what's in the awesomeCoin blockchain!
-    awesomeCoin.printChain();
+    // Let's see what's in the Glyztera blockchain!
+    glyztera.printChain();
     
     // Is it valid?
-    printf("\nIs chain still valid? %d\n", awesomeCoin.isChainValid());
+    printf("\nIs chain still valid? %d\n", glyztera.isChainValid());
     
     // Someone's getting sneaky
-    Block *hackBlock = awesomeCoin.getLatestBlock();
+    Block *hackBlock = glyztera.getLatestBlock();
     hackBlock->data.amount = 10000; // Oh yeah!
     hackBlock->data.receiverKey = "Jon"; // mwahahahaha!
 
     // Let's look at data
-    awesomeCoin.printChain();
+    glyztera.printChain();
 
     // Awww! Why is it not valid?
-    printf("\nIs chain still valid? %d\n", awesomeCoin.isChainValid());
+    printf("\nIs chain still valid? %d\n", glyztera.isChainValid());
     
     return 0;
 }
