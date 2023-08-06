@@ -1,4 +1,5 @@
 # Glyztera Blockchain
+![GitHub repo size](https://img.shields.io/github/repo-size/Glyztera/blockchain?style=for-the-badge)
 
 Welcome to the Glyztera Blockchain project, a project focused on developing a robust, efficient, and secure blockchain, written entirely in C++.
 
