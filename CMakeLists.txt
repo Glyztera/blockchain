@@ -1,11 +1,13 @@
 cmake_minimum_required(VERSION 3.10)
-
-# set the project name
 project(GlyzteraBlockchain)
 
-# specify the C++ standard
-set(CMAKE_CXX_STANDARD 11)
-set(CMAKE_CXX_STANDARD_REQUIRED True)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/..)
 
-# add the executable
-add_executable(GlyzteraBlockchain src/Block.cpp src/Blockchain.cpp src/main.cpp)
+include_directories(src/include)  # Include the directory where your .h files are.
+
+add_executable(GlyzteraBlockchain
+    src/Block.cpp
+    src/Blockchain.cpp
+    src/main.cpp
+)
