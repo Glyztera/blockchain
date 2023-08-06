@@ -8,6 +8,7 @@ on:
 
 jobs:
   build:
+    name: Compile and Run C++ Project
     runs-on: ubuntu-latest
 
     steps:
