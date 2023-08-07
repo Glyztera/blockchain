@@ -3,6 +3,7 @@
 ![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/Glyztera/blockchain/c-cpp.yml?style=for-the-badge&label=CMake%20Build)
 [![Discord](https://img.shields.io/discord/1137194451756912700?style=for-the-badge)](https://discord.gg/PHymDZgUgJ)
 
+
 Welcome to the Glyztera Blockchain project, a project focused on developing a robust, efficient, and secure blockchain, written entirely in C++.
 
 ## Getting Started
