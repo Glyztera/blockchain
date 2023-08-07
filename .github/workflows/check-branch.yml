@@ -9,6 +9,7 @@ on:
       - reopened
 jobs:
   check-branch:
+    name: Check Branch Types
     runs-on: ubuntu-latest
     steps:
       - name: Fail if PR to 'mainnet' not from 'testnet' branch
