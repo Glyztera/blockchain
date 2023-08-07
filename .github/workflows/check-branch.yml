@@ -1,0 +1,16 @@
+name: Check branch
+on:
+  pull_request:
+    branches:
+      - mainnet
+    types:
+      - opened
+      - synchronize
+      - reopened
+jobs:
+  check-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fail if PR to 'mainnet' not from 'testnet' branch
+        run: exit 1
+        if: github.head_ref != 'testnet'
