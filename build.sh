@@ -1,8 +1,5 @@
 #!/bin/sh
 
-# Navigate to the project directory
-cd /path/to/your/project
-
 # Delete the old build directory and create a new one
 rm -rf build
 mkdir build

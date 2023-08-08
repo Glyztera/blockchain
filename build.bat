@@ -1,8 +1,5 @@
 @echo off
 
-REM Navigate to the project directory
-cd /path/to/your/project
-
 REM Delete the old build directory and create a new one
 if exist build rmdir /s /q build
 mkdir build
