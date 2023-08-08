@@ -14,28 +14,27 @@
 #include "Block.h"
 #include "Blockchain.h"
 
-using namespace std;
-
 int main()
 {
     // Start Blockchain
     Blockchain glyztera;
-    
+
     // Data for first block
     time_t data1Time;
     TransactionData data1(1.5, "Joe", "Sally", time(&data1Time));
     glyztera.addBlock(data1);
-    
+
+    // Data for second block
     time_t data2Time;
     TransactionData data2(0.2233, "Martha", "Fred", time(&data2Time));
     glyztera.addBlock(data2);
-    
+
     // Let's see what's in the Glyztera blockchain!
     glyztera.printChain();
-    
+
     // Is it valid?
-    cout << "\nIs chain still valid? " << glyztera.isChainValid() << endl;
-    
+    std::cout << "\nIs chain still valid? " << glyztera.isChainValid() << std::endl;
+
     // Someone's getting sneaky
     Block *hackBlock = glyztera.getLatestBlock();
     hackBlock->data.amount = 10000; // Oh yeah!
@@ -45,7 +44,7 @@ int main()
     glyztera.printChain();
 
     // Awww! Why is it not valid?
-    cout << "\nIs chain still valid? " << glyztera.isChainValid() << endl;
-    
+    std::cout << "\nIs chain still valid? " << glyztera.isChainValid() << std::endl;
+
     return 0;
 }
