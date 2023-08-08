@@ -12,3 +12,6 @@ cmake ..
 
 REM Compile the project (modify with your actual .sln file)
 msbuild GlyzteraBlockchain.sln /p:Configuration=Release
+
+REM Added for debug.
+pause
