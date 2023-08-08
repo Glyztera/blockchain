@@ -11,4 +11,4 @@ REM Run CMake to generate the build files
 cmake ..
 
 REM Compile the project (modify with your actual .sln file)
-msbuild MyProject.sln /p:Configuration=Release
+msbuild GlyzteraBlockchain.sln /p:Configuration=Release
